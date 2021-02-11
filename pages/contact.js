@@ -1,11 +1,8 @@
 import Container from 'components/Container';
+import ContactForm from 'components/contact/ContactForm';
 
 const Contact = () => {
-	return (
-		<Container>
-			<h1>Contact</h1>
-		</Container>
-	);
+	return <ContactForm />;
 };
 
 export default Contact;
