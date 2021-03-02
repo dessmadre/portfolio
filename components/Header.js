@@ -19,7 +19,7 @@ const Header = () => {
 						layout
 						initial={false}
 						transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-						className={`cursor-pointer ${
+						className={`nav__links-link ${
 							activeLink === href
 								? 'text-black font-bold border-b-2 border-green-400'
 								: 'text-green-400 font-semibold border-b-2 border-transparent   '
@@ -31,12 +31,12 @@ const Header = () => {
 		});
 
 	return (
-		<nav className='w-full h-12 flex px-12 items-center shadow-lg z-50'>
+		<nav className='nav'>
 			<Link href='/'>
-				<h3 className='flex-1 text-xl font-bold cursor-pointer'>Jose Duarte</h3>
+				<h3 className='nav__logo'>Jose Duarte</h3>
 			</Link>
 
-			<ul className='flex justify-between w-2/5'>
+			<ul className='nav__links'>
 				{' '}
 				<AnimateSharedLayout>{links} </AnimateSharedLayout>
 			</ul>

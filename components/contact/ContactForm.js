@@ -38,72 +38,68 @@ export default function ContactForm() {
 	};
 
 	return (
-		<div className='w-full min-h-screen bg-gray-50 flex items-center'>
-			<div className='px-5 pt-12 pb-8 mx-1 flex flex-wrap flex-col md:flex-row w-full h-auto items-start justify-center rounded-xl '>
-				<div className='w-full md:w-1/3 px-4 py-5 self-start justify-self-stretch bg-green-50 rounded-xl shadow-xl'>
-					<h2 className='text-4xl font-semibold '>Contact Me</h2>
-					<p className='mt-2 text-sm '>
-						You can reach me by filling out this contact form. I look forward to
-						hearing from you, let's work together and made make your idea a
-						reality.
+		<div className='contact'>
+			<div className='contact__container'>
+				<div className='contact__info'>
+					<h2 className='contact__info--title'>Contact Me</h2>
+					<p className='contact__info--paragraph'>
+						Here are some ways to reach me. I look forward to hearing from you,
+						let's work together and made make your idea a reality.
 					</p>
-					<div className='flex flex-col mt-5'>
-						<p className='contactInfo'>
+					<div className='contact__info--info'>
+						<p className='contact__info-info-details'>
 							<span>
-								<svg className='contactInfo__icon'>
+								<svg className='contact__info--info-icon'>
 									<use xlinkHref='/sprite.svg#icon-phone' />
 								</svg>
 							</span>{' '}
 							(818)721-6257
 						</p>
-						<p className='contactInfo'>
+						<p className='contact__info-info-details'>
 							<span>
-								<svg className='contactInfo__icon'>
+								<svg className='contact__info--info-icon'>
 									<use xlinkHref='/sprite.svg#icon-mail' />
 								</svg>
 							</span>{' '}
 							jduarte0912@gmail.com
 						</p>
 					</div>
-					<div className='mt-14'>
+					<div className='contact__info--socials'>
 						<ul className='flex justify-evenly'>
 							<li>
 								<a
 									href='https://www.linkedin.com/in/jose-r-duarte/'
 									target='_blank'>
-									<svg className='social__icon'>
+									<svg className='contact__info--socials-icon'>
 										<use xlinkHref='/sprite.svg#icon-linkedin' />
 									</svg>
 								</a>
 							</li>
 							<li>
 								<a href='https://twitter.com/Space__Coupe' target='_blank'>
-									<svg className='social__icon'>
+									<svg className='contact__info--socials-icon'>
 										<use xlinkHref='/sprite.svg#icon-twitter' />
 									</svg>
 								</a>
 							</li>
 							<li>
-								<a
-									href='https://www.instagram.com/finkerlinginggood/'
-									target='_blank'>
-									<svg className='social__icon'>
-										<use xlinkHref='/sprite.svg#icon-instagram' />
+								<a href='https://github.com/dessmadre' target='_blank'>
+									<svg className='contact__info--socials-icon'>
+										<use xlinkHref='/sprite.svg#icon-github' />
 									</svg>
 								</a>
 							</li>
 						</ul>
 					</div>
 				</div>
-				<form className='md:w-2/3 py-2 rounded-xl' onSubmit={handleSubmit}>
-					<div className='flex flex-wrap'>
-						<div className='w-full  px-3 mb-6 md:mb-0'>
-							<label className='form__label' htmlFor='name'>
+				<form className='contact__form' onSubmit={handleSubmit}>
+					<div className='contact__form--container'>
+						<div className='contact__form--input-group'>
+							<label className='contact__form--label' htmlFor='name'>
 								Name
 							</label>
 							<input
-								layout
-								className='form__input '
+								className='contact__form--input'
 								id='name'
 								name='name'
 								value={name || ''}
@@ -111,13 +107,12 @@ export default function ContactForm() {
 								required
 							/>
 						</div>
-						<div className='w-full px-3 mb-6 md:mb-0'>
-							<label className='form__label' htmlFor='email'>
+						<div className='contact__form--input-group'>
+							<label className='contact__form--label' htmlFor='email'>
 								Email
 							</label>
 							<input
-								layout
-								className='form__input'
+								className='contact__form--input'
 								id='email'
 								name='email'
 								value={email || ''}
@@ -125,13 +120,12 @@ export default function ContactForm() {
 								required
 							/>
 						</div>
-						<div className='w-full px-3 mb-6 md:mb-0'>
-							<label className='form__label' htmlFor='email'>
+						<div className='contact__form--input-group'>
+							<label className='contact__form--label' htmlFor='email'>
 								Message
 							</label>
 							<textarea
-								layout
-								className='form__input resize-none'
+								className='contact__form--input resize-none'
 								id='message'
 								name='formContent'
 								value={formContent || ''}
@@ -139,19 +133,17 @@ export default function ContactForm() {
 								required
 							/>
 						</div>
-						<div className='md:flex md:items-center w-full px-3 justify-start'>
-							<div className='self-end'>
-								<motion.button
-									whileHover={{ scale: 1.1 }}
-									whileTap={{ scale: 0.9 }}
-									className={`shadow focus:outline-none ${
-										formButtonDisabled ? 'bg-indigo-300' : 'bg-green-200'
-									} focus:shadow-md text-black font-bold py-2 px-4 rounded`}
-									type='submit'
-									disabled={formButtonDisabled}>
-									{formButton}
-								</motion.button>
-							</div>
+						<div className='contact__form--btn-block'>
+							<motion.button
+								whileHover={{ scale: 1.1 }}
+								whileTap={{ scale: 0.9 }}
+								className={`contact__form--btn ${
+									formButtonDisabled ? 'bg-green-200' : 'bg-indigo-300'
+								} `}
+								type='submit'
+								disabled={formButtonDisabled}>
+								{formButton}
+							</motion.button>
 						</div>
 					</div>
 				</form>
