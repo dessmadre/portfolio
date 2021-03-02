@@ -42,10 +42,6 @@ export default function ContactForm() {
 			<div className='contact__container'>
 				<div className='contact__info'>
 					<h2 className='contact__info--title'>Contact Me</h2>
-					<p className='contact__info--paragraph'>
-						Here are some ways to reach me. I look forward to hearing from you,
-						let's work together and made make your idea a reality.
-					</p>
 					<div className='contact__info--info'>
 						<p className='contact__info-info-details'>
 							<span>

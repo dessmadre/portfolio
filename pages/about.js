@@ -12,10 +12,10 @@ const About = () => {
 					py-24 text-5xl font-bold'>
 						About Me<span className='text-green-400'>.</span>
 					</h1>
-					<p className='text-2xl font-semibold'>
-						My name is Jose Duarte, I am a front-end web developer. I started
-						learing JavaScript in 2020 and started working with React shortly
-						after.
+					<p className='text-2xl font-semibold w-3/5'>
+						My name is Jose Duarte, and I am a front-end web developer. I
+						Learned Javascript in 2020 and started making react apps as soon as
+						I got comfortable with the language.
 					</p>
 				</div>
 			</Container>
