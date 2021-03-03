@@ -49,7 +49,7 @@ export default function ContactForm() {
 									<use xlinkHref='/sprite.svg#icon-phone' />
 								</svg>
 							</span>{' '}
-							(818)721-6257
+							(818)669-6901
 						</p>
 						<p className='contact__info-info-details'>
 							<span>
