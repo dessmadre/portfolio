@@ -42,9 +42,9 @@ const mailer = ({ senderMail, name, text, recipientMail }) => {
 		replyTo: from,
 	};
 
-	return new Promise((resolve, rej) => {
+	return new Promise((resolve, reject) => {
 		transporter.sendMail(message, (error, reject) =>
-			error ? rej(error) : resolve(info),
+			error ? reject(error) : resolve(info),
 		);
 	});
 };
