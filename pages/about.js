@@ -14,7 +14,7 @@ const About = () => {
             About Me<span className='text-green-400'>.</span>
           </h1>
           <p className='text-2xl font-semibold w-3/5'>
-            My name is Jose Duarte, I am not Los Angeles based web-developer.
+            My name is Jose Duarte, I am a Los Angeles based web-developer.
           </p>
         </div>
       </Container>
