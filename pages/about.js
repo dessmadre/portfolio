@@ -13,9 +13,7 @@ const About = () => {
 						About Me<span className='text-green-400'>.</span>
 					</h1>
 					<p className='text-2xl font-semibold w-3/5'>
-						My name is Jose Duarte, and I am a front-end web developer. I
-						Learned Javascript in 2020 and started making react apps as soon as
-						I got comfortable with the language.
+						My name is Jose Duarte, I am a Los Angeles based web-developer.
 					</p>
 				</div>
 			</Container>
